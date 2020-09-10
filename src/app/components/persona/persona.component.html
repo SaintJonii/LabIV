@@ -1,0 +1,33 @@
+<nav>
+    <div class="example-button-row">
+        <button (click)="nav(1)" mat-button color="primary">Cargar</button>
+        <button (click)="nav(2)" mat-button color="warn">Listar</button>
+    </div>
+
+</nav>
+
+<app-cargar-persona *ngIf="caso == 1" (onCargar)="onCargar($event)"></app-cargar-persona>
+
+<app-listado-personas *ngIf="caso == 2" [titulo]="titulo" [listaNombres]="listaNombres"></app-listado-personas>
+
+<!-- <h1 *ngIf="mostrarCondicional">Condicional</h1>
+<h1 [style.display]="!mostrarCondicional? 'block': 'none' ">Condicional 2</h1>
+
+<h1 (click)="manejadora($event)">{{titulo}}</h1>
+
+<img [src]="src" alt="gato" width="150px" height="auto">
+<br>
+
+
+<h6>{{persona.nombre}}, {{persona.apellido}}</h6>
+
+<h1>Switch</h1>
+<div [ngSwitch]="persona.nombre">
+    <h4 *ngSwitchCase="'Pepe'">{{persona.nombre}}, {{persona.apellido}}</h4>
+    <h4 *ngSwitchCase="'Juan'">{{persona.nombre}}, {{persona.apellido}}</h4>
+    <h4 *ngSwitchDefault>Otro Nombre</h4>
+</div>
+
+<div *ngFor="let item of listaNombres; let i = index">
+    {{i+1}} - {{persona.nombre}}, {{persona.apellido}}
+</div> -->

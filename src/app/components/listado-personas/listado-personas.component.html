@@ -1,0 +1,5 @@
+<h2>{{titulo}}</h2>
+
+<div *ngFor="let persona of listaNombres; let i = index">
+    {{i+1}} - {{persona.nombre}}, {{persona.apellido}}
+</div>
